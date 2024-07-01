@@ -9,7 +9,6 @@ import PasswordValidator from './components/PasswordValidator';
 import Quiz from './components/Quiz';
 import RPSGame from './components/RPSGame';
 import RollDice from './components/RollDice';
-import SideBar from './components/SideBar';
 import ToDoList from './components/ToDoList';
 import './style.css';
 import HamMenu from './components/HamMenu';

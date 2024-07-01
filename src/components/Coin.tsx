@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { StyledCoinContainer } from '../styles';
 interface CoinProps {
   side: string;

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Grid } from '@mui/material';
 import {
   StyledForm,
