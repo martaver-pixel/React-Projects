@@ -7,7 +7,7 @@ interface CoinProps {
 const Coin = ({ side }) => {
   return (
     <StyledCoinContainer>
-      <img src={`../public/img/${side}.jpg`} alt={side} width='200px' />
+      <img src={`./img/${side}.jpg`} alt={side} width='200px' />
     </StyledCoinContainer>
   );
 };

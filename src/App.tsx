@@ -9,6 +9,7 @@ import PasswordValidator from './components/PasswordValidator';
 import Quiz from './components/Quiz';
 import RPSGame from './components/RPSGame';
 import RollDice from './components/RollDice';
+import SideBar from './components/SideBar';
 import ToDoList from './components/ToDoList';
 import './style.css';
 import HamMenu from './components/HamMenu';
@@ -30,7 +31,7 @@ const App = () => {
       ) : (
         <HamMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       )}
-      {isOpen && <StyledSideBar />}
+      {isOpen && screenWidth < 1000 ? <SideBar isOpen={true} /> : ''}
       <Form />
       <Jokes />
       <PasswordValidator />

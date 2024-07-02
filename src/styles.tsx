@@ -6,6 +6,10 @@ interface ValidatorPProps {
 interface ColorBoxProps {
   $color: string;
 }
+
+interface SideBarProps {
+  $animation: boolean;
+}
 //NavBar
 export const StyledNavBarContainer = styled.div`
   display: flex;
@@ -36,15 +40,85 @@ export const StyledNavAnchor = styled.a`
   }
 `;
 
-//SideBar
-
-export const StyledSideBarContainer = styled.div`
-  background-color: #02a481;
-  height: 5rem;
+// Ham menu
+export const StyledHamMenuContainer = styled.div`
+  height: 0;
 `;
 
-export const StyledSideBar = styled.aside``;
-export const StyledSideBarAnchor = styled.a``;
+export const StyledHamMenu = styled.button`
+  z-index: 99;
+  position: fixed;
+  background-color: #02a481;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+  margin: 10px;
+  color: wheat;
+
+  & .css-i4bv87-MuiSvgIcon-root {
+    font-size: 2.5rem;
+  }
+`;
+
+//SideBar
+export const StyledSideBarContainer = styled.div<SideBarProps>`
+  position: fixed;
+  z-index: 98;
+  background-color: #02a481bc;
+  width: 40%;
+  height: 100%;
+  transform: translateX(-100%);
+  padding: 10px;
+  animation: ${(props) =>
+    props.$animation === true
+      ? 'slide-in 1s forwards'
+      : 'slide-out 1s forwards'};
+
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+`;
+
+export const StyledSideBar = styled.aside`
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding-left: 10px;
+  & :first-child {
+    padding-top: 4.7rem;
+  }
+  & :active {
+    color: #02a481;
+    text-decoration: none;
+  }
+  & :hover {
+    text-decoration: underline;
+  }
+`;
+export const StyledSideBarAnchor = styled.a`
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+`;
 
 //Form
 export const StyledFormContainer = styled.div`

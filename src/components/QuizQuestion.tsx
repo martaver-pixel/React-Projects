@@ -15,11 +15,7 @@ const QuizQuestion = ({ question, i }) => {
     <StyledQuizQstFieldset>
       <StyledQuizQstLegend>{question.q}</StyledQuizQstLegend>
       <StyledQuizImgDiv>
-        <img
-          src={`../public/img/q${i + 1}.webp`}
-          alt='office img'
-          width={'300px'}
-        />
+        <img src={`./img/q${i + 1}.webp`} alt='office img' width={'300px'} />
       </StyledQuizImgDiv>
       <StyledAnsWrapper>
         {options &&

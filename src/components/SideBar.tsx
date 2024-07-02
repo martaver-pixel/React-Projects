@@ -4,9 +4,9 @@ import {
   StyledSideBarContainer,
 } from '../styles';
 
-const SideBar = () => {
+const SideBar = ({ isOpen }) => {
   return (
-    <StyledSideBarContainer>
+    <StyledSideBarContainer $animation={isOpen}>
       <StyledSideBar>
         <StyledSideBarAnchor href='#form'>Form</StyledSideBarAnchor>
         <StyledSideBarAnchor href='#jokes'>Jokes</StyledSideBarAnchor>

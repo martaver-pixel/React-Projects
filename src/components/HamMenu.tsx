@@ -2,18 +2,18 @@
 
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { StyledHamMenu, StyledHamMenuContainer } from '../styles';
+import { useState } from 'react';
 const HamMenu = ({ isOpen, setIsOpen }) => {
   const handleOnClick = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
-      <div>
-        <button onClick={handleOnClick}>
-          {isOpen ? <CloseIcon /> : <MenuIcon />}
-        </button>
-      </div>
-    </div>
+    <StyledHamMenuContainer>
+      <StyledHamMenu onClick={handleOnClick}>
+        {isOpen ? <CloseIcon /> : <MenuIcon />}
+      </StyledHamMenu>
+    </StyledHamMenuContainer>
   );
 };
 
